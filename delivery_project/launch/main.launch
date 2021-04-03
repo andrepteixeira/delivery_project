@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find delivery_project)/launch/start_world.launch"/>
+
+</launch>
