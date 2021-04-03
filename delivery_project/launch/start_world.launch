@@ -1,5 +1,5 @@
 <launch>
-    <!-- <arg name="world_name" default="$(find delivery_project)/worlds/andre_teixeira_pb.world"/>
+    <arg name="world_name" default="$(find delivery_project)/worlds/andre_teixeira_pb.world"/>
     <arg name="put_robot_in_world" default="false" />
     <arg name="put_robot_in_world_package" default="" />
     <arg name="put_robot_in_world_launch" default="" />
@@ -16,7 +16,7 @@
 	<arg name="gui" default="true"/>
 	<arg name="headless" default="false"/>
 	<arg name="debug" default="false"/>
-	<arg name="verbose" default="true" /> -->
+	<arg name="verbose" default="true" />
 
 
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">

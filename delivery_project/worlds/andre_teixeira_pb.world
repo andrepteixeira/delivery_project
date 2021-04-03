@@ -1,4 +1,4 @@
-<!-- <sdf version='1.4'>
+<sdf version='1.4'>
   <world name='default'>
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
@@ -262,77 +262,7 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <!-- <state world_name='default'>
-      <sim_time>306 815000000</sim_time>
-      <real_time>437 169369540</real_time>
-      <wall_time>1616608163 929284268</wall_time>
-      <iterations>306815</iterations>
-      <model name='ground_plane'>
-        <pose>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='turtlebot3_waffle_pi'>
-        <pose>0.000148 0.000231 -0.001007 -3e-06 0.003179 0.001592</pose>
-        <scale>1 1 1</scale>
-        <link name='base_footprint'>
-          <pose>0.000148 0.000231 -0.001007 -3e-06 0.003179 0.001592</pose>
-          <velocity>1e-06 2e-06 4.4e-05 -4.9e-05 -0.000211 1.2e-05</velocity>
-          <acceleration>-0 -0 -0 0 -0 0</acceleration>
-          <wrench>-0 -0 -0 0 -0 0</wrench>
-        </link>
-        <link name='wheel_left_link'>
-          <pose>2.4e-05 0.144231 0.031992 -1.57001 0.000858 0.00159</pose>
-          <velocity>-8e-06 3e-06 3.7e-05 -5.9e-05 -0.000237 1.2e-05</velocity>
-          <acceleration>-0 -0 0 0 -0 0</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
-        </link>
-        <link name='wheel_right_link'>
-          <pose>0.000482 -0.143769 0.031993 -1.57001 0.015386 0.001602</pose>
-          <velocity>-4e-06 3e-06 5.1e-05 -5.9e-05 -0.000149 1.2e-05</velocity>
-          <acceleration>-0 -0 -0 -0 -0 -0</acceleration>
-          <wrench>-0 -0 -0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='unit_box'>
-        <pose>5.81257 -0.02224 0.5 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>5.81257 -0.02224 0.5 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0 -0 0 0 -0 0</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='unit_box_0'>
-        <pose>-5.94394 -0.031288 0.5 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-5.94394 -0.031288 0.5 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='unit_box_1'>
-        <pose>-0.074897 7.77132 0.5 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-0.074897 7.77132 0.5 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0 -0 0 0 -0 0</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <light name='sun'>
-        <pose>0 0 10 0 -0 0</pose>
-      </light>
-    </state> -->
+
     <gui fullscreen='0'>
       <camera name='user_camera'>
         <pose>-0.692361 0.026472 17.6128 3.14159 1.57079 3.14159</pose>
@@ -341,4 +271,4 @@
       </camera>
     </gui>
   </world>
-</sdf> -->
+</sdf>
