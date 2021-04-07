@@ -1,27 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-#############################################
-#                                           #
-# Library for robot control with different  #
-# approaches and other usefull functions.   #
-#                                           #
-# Changes:                                  #
-#    * Threshold option for cartesian       #
-#      ans polar control functions          #
-#    * IBVS funtion for image based visual  #
-#      servoin control.                     #
-#    * Function for recover the coordinate  #
-#      of a point in the image with respect #
-#      to the camera frame.                 #
-#                                           #
-# Author: Adalberto Oliveira                #
-# Autonomous Vehicle - Infnet	            #
-# Version: 1.4                              #
-# Date: 21-10-2021                          #
-#                                           #
-#############################################
-
 
 import rospy, time, sys, math, angles
 import numpy as np
@@ -31,12 +8,7 @@ import image_geometry
 
 
 def cartesian_control(robot_pose,goal,K_v,K_omega,max_lin=0.5, max_ang=0.5, threshold=0):
-    """
-    This function computes the control signal to guides the 
-    robot to the desired goal. It's based on the Cartesian
-    Control Algorithm
-    """
-
+   
     # Computing the position error
     error_x = goal.x - robot_pose.x
     error_y = goal.y - robot_pose.y
@@ -66,12 +38,7 @@ def cartesian_control(robot_pose,goal,K_v,K_omega,max_lin=0.5, max_ang=0.5, thre
 
 
 def polar_control(robot_pose,goal,K_rho,K_alpha, K_beta, max_lin=0.5, max_ang=0.5, threshold=0):
-    """
-    This function computes the control signal to guides the 
-    robot to the desired goal. It's based on the Cartesian
-    Control Algorithm
-    """
-
+    
     # recovering the variables
     x = robot_pose.x
     y = robot_pose.y
@@ -116,14 +83,8 @@ def polar_control(robot_pose,goal,K_rho,K_alpha, K_beta, max_lin=0.5, max_ang=0.
 
     return u
 
-
 def tracking_control(donkey_pose, master_pose, delta_tracking, gains, error_int, max_vel):
-    """
-    This function computes the control signal to guides the 
-    robot to the desired goal. It's based on the Cartesian
-    Control Algorithm
-    """
-    
+   
     # Recovering control gains
     K_v = gains[0]
     K_int = gains[1]
@@ -159,14 +120,8 @@ def tracking_control(donkey_pose, master_pose, delta_tracking, gains, error_int,
 
     return u, errors
 
-
 def ibvs(img_goal, image_point, camera_matrix, gains_cart,vel_lim):
-    """
-    This function receives the destination pixel (img_goal), the current 
-    pixel coordinate and camera matrix, and returns the control signal based on 
-    IBVS approach, with control gains and velocity limits 
-    """
-
+   
     # recovering goal point
     ud = img_goal.x
     vd = img_goal.y
@@ -231,13 +186,8 @@ def ibvs(img_goal, image_point, camera_matrix, gains_cart,vel_lim):
 
     return cmd_vel
 
-
 def get_img_point(image_point, camera_matrix, frame_id='camera_link'):
-    """
-    This function receives the image point in pixel and returns the point 
-    coordinate in the camera frame as a PointStamped object with frame_id.
-    """
-    
+   
     # Recovering image point
     u = image_point.x
     v = image_point.y
